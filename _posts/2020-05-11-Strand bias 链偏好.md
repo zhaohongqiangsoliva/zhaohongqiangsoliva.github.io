@@ -9,7 +9,6 @@ catalog: 	 true
 tags:
     - 生信算法
 ---
-
 # Strand bias 链偏好
 ## 背景
 ![GATK.png](https://upload-images.jianshu.io/upload_images/15500891-64fe39367e89e6bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -27,8 +26,18 @@ tags:
 对bam文件里reads的碱基质量值进行重新校正，使最后输出的bam文件中reads中碱基的质量值能够更加接近真实的与参考基因组之间错配的概率
 在reads碱基质量值被校正之前，我们要保留质量值在Q25以上的碱基，但是实际上质量值在Q25的这些碱基的错误率在1%，也就是说质量值只有Q20，这样就会对后续的变异检测的可信度造成影响。还有，在边合成边测序的测序过程中，在reads末端碱基的错误率往往要比起始部位更高。另外，AC的质量值往往要低于TG。BQSR的就是要对这些质量值进行校正。
 
+当两者同时出现的时候，就会产生大量的链偏好性
 
-
+```
+Chr	Pos		Depth	a1	b2	c3	d4	Forward Strand Genotype	Reverse Strand Genotype
+6	32975014	21	5	5	10	1	Heterzygous		Homozygous
+1	81967962	38	20	11	7	0	Heterzygous		Homozygous
+12	10215654	31	15	9	7	0	Heterzygous		Homozygous
+1. Forward strand reference allele.
+2. Forward strand non reference allele.
+3. Reverse strand reference allele.
+4. Reverse strand non reference allele.
+```
 ### 算法
 #### SB算法
 
