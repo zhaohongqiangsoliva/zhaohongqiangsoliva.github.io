@@ -12,7 +12,7 @@ tags:
 
 # Strand bias 链偏好
 ## 背景
-![image][https://github.com/zhaohongqiangsoliva/zhaohongqiangsoliva.github.io/blob/master/img/GATK.png]
+![image](https://github.com/zhaohongqiangsoliva/zhaohongqiangsoliva.github.io/blob/master/img/GATK.png)
 
 ### 造成链偏好的原因：
 1.Local realignment
