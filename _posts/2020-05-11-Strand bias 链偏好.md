@@ -12,12 +12,14 @@ tags:
 
 # Strand bias 链偏好
 ## 背景
-![image](https://github.com/zhaohongqiangsoliva/zhaohongqiangsoliva.github.io/blob/master/img/GATK.png)
+![GATK.png](https://upload-images.jianshu.io/upload_images/15500891-64fe39367e89e6bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ### 造成链偏好的原因：
 1.Local realignment
 目的就是将比对到indel附近的reads进行局部重新比对，将比对的错误率降到最低。一般来说，绝大部分需要进行重新比对的基因组区域，都是因为插入/缺失的存在，因为在indel附近的比对会出现大量的碱基错配，这些碱基的错配很容易被误认为SNP。还有，在比对过程中，比对算法对于每一条read的处理都是独立的，不可能同时把多条reads与参考基因组比对来排错。因此，即使有一些reads能够正确的比对到indel，但那些恰恰比对到indel开始或者结束位置的read也会有很高的比对错误率，这都是需要重新比对的。Local realignment就是将由indel导致错配的区域进行重新比对，将indel附近的比对错误率降到最低。
 
+![GATK-realignment.png](https://upload-images.jianshu.io/upload_images/15500891-34bd5e2375fb8fb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -30,10 +32,13 @@ tags:
 ### 算法
 #### SB算法
 
+![SB.png](https://upload-images.jianshu.io/upload_images/15500891-2ca4f246e643975f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### gatk-SB
+![GATK-SB.png](https://upload-images.jianshu.io/upload_images/15500891-78517a29149056c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### fisher检验算法范围（0-1）
+![FISHER.png](https://upload-images.jianshu.io/upload_images/15500891-9edbc217e261bb10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Pvalue=1-p
 
