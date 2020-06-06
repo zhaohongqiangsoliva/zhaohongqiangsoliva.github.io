@@ -1,4 +1,4 @@
----
+/clinical/public/panel825plus/P2005040007_W060884T_W060476N_panel825plus---
 layout:     post
 title:      MSI算法
 subtitle:   msisensor计算原理
