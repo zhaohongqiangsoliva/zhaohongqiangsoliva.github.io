@@ -156,7 +156,7 @@ the logOR is
 ```
 
 ![1591695237945.png](/img/facets/1591695237945.png)
-
+```
 ###  the M step is 
 #get CF per segments, pick mode close to 1 (favor high purity low cn solution)
     rhom=gammam=matrix(NA,nrow=nclust,ncol=ng)
@@ -252,14 +252,14 @@ the logOR is
       } #max prior
       
     }
-
+```
 ![1591695253756.png](/img/facets/1591695253756.png)
 
 ### Loop until it converges
 
 ## Or simpler, also use the CBS algorithm instead it
 
-# 普通方式计算CNV
+# picard方式计算CNV
 探针长度
 ```
 chrom   start   end     length  
