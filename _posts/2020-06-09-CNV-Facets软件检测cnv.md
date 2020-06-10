@@ -47,40 +47,54 @@ $2R = REF-T$
 $2A = ALT-T$
 
 ### NEXT
-$$
 
 
-1R=countN=N-RD
-2R=countT=T-RD
-N-DP=1R+1A
-T-DP=2R+2A
-varT=T-RD/T-DP
-varN=N-RD/N-DP
 
-$$
+$1R=countN=N-RD$
+
+$2R=countT=T-RD$
+
+$N-DP=1R+1A$
+
+$T-DP=2R+2A$
+
+$varT=T-RD/T-DP$
+
+$varN=N-RD/N-DP$
+
+
 ### as the picture shows
 
 ![1591692248504.png](/img/facets/1591692248504.png)
 
 Then the software starts to calculate logR and logOR and gcbias
 the gcbias plaes look this blog http://www.zxzyl.com/archives/988
-$$
+
 the logR is 
-    ncount <- tapply(rCountN, gcpct, sum)
-    tcount <- tapply(rCountT, gcpct, sum)
-    tsc1=\frac {sum(ncount)} {sum(tcount)}
-    log2(1+rCountT*tscl) - log2(1+rCountN) - gcbias
+    $ncount <- tapply(rCountN, gcpct, sum)$
+
+    $tcount <- tapply(rCountT, gcpct, sum)$
+
+    $tsc1=\frac {sum(ncount)} {sum(tcount)}$
+
+    $log2(1+rCountT*tscl) - log2(1+rCountN) - gcbias$
 the logOR is
-    1 = varT x countT
-    2 = (1-varT) x countT 
-    3 = varN x countN
-    4 = (1-varN) x countN
+    $1 = varT x countT$
+
+    $2 = (1-varT) x countT $
+
+    $3 = varN x countN$
+
+    $4 = (1-varN) x countN$
+    
     than 
     ## log-odds-ratio (Haldane correction)
-    logOR = log(1+0.5)-log(2+0.5)-log(3+0.5)+log(4+0.5) 
+    
+    $logOR = log(1+0.5)-log(2+0.5)-log(3+0.5)+log(4+0.5) $
     ## variance of log-odds-ratio (Haldane; Gart & Zweifel Biometrika 1967)
-    logOR = (\frac {1} {( [,1]+0.5)} + \frac {1} {( [,2]+0.5)} + \frac {1} {( [,3]+0.5)} + \frac {1} {( [,4]+0.5))}
-$$
+    
+    $logOR = (\frac {1} {( [,1]+0.5)} + \frac {1} {( [,2]+0.5)} + \frac {1} {( [,3]+0.5)} + \frac {1} {( [,4]+0.5))}$
+
 ### The following steps are the EM algorithm, here they use Bayesian in step E to get the posterior probability,
 ```
 ####LogR mixture model parameter####
