@@ -283,10 +283,21 @@ chr1    12595   12802   208        0.011583            DDX11L1
 ### 算法
 例如gene  EGFR
 
-片段长度：length = L1 L2  L3  L4  L5
+片段长度：
+```math
+length = L1 L2  L3  L4  L5
+```
+归一化覆盖:
+```math
+Tn = Tn_{1}\ Tn_{2}\ Tn_{3}\ Tn_{4}\ Tn_{5}
+```
 
-归一化覆盖:Tn = Tn1 Tn2 Tn3 Tn4 Tn5
-           Nn = Nn1 Nn2 Nn3 Nn4 Nn5
+```math
+Nn = Nn_{1}\ Nn_{2}\ Nn_{3}\ Nn_{4}\ Nn_{5}
+```
 
-计算 :   ((Tn1/Nn1)xL1+(Tn2/Nn2)xL2+·····)/L1+···L5 =拷贝率  
-        
+计算 :  
+```math
+ \frac {(L1(\frac {Tn_{1}} {Nn_{1}})+L2(\frac {Tn_{2}} {Nn_{2}})+·····)} {L1+···L5} =copy\ number\ ratio
+ 
+```
