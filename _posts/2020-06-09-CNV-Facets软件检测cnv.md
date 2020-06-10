@@ -58,9 +58,9 @@ $N-DP=1R+1A$
 
 $T-DP=2R+2A$
 
-$varT=T-RD/T-DP$
+$varT=\frac {T-RD} {T-DP}$
 
-$varN=N-RD/N-DP$
+$varN=\frac {N-RD} {N-DP}$
 
 
 ### as the picture shows
