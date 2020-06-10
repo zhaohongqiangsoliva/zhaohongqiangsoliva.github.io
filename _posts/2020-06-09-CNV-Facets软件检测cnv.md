@@ -297,6 +297,6 @@ Nn = Nn_{1}\ Nn_{2}\ Nn_{3}\ Nn_{4}\ Nn_{5}
 ```
 
 计算 :  
-$
+$$
  \frac {(L1(\frac {Tn_{1}} {Nn_{1}})+L2(\frac {Tn_{2}} {Nn_{2}})+·····)} {L1+···L5} =copy\ number\ ratio
-$
+$$
