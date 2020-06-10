@@ -36,12 +36,12 @@ unlike other software ,facets calulates the depth of snp in each bin ,normal CNV
 
 ![1591691763518.png](/img/facets/1591691763518.png)
 ## summary 
-$$
-1R = REF-N
-1A = ALT-N
-2R = REF-T
-2A = ALT-T
-$$
+
+$1R = REF-N$
+$1A = ALT-N$
+$2R = REF-T$
+$2A = ALT-T$
+
 ### NEXT
 $$
 
