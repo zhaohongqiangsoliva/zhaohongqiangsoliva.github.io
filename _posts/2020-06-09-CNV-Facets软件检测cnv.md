@@ -36,14 +36,14 @@ unlike other software ,facets calulates the depth of snp in each bin ,normal CNV
 
 ![1591691763518.png](/img/facets/1591691763518.png)
 ## summary 
-```
+$$
 1R = REF-N
 1A = ALT-N
 2R = REF-T
 2A = ALT-T
-```
-### THE NEXT
-```
+$$
+### NEXT
+$$
 
 
 1R=countN=N-RD
@@ -53,30 +53,30 @@ T-DP=2R+2A
 varT=T-RD/T-DP
 varN=N-RD/N-DP
 
-```
+$$
 ### as the picture shows
 
 ![1591692248504.png](/img/facets/1591692248504.png)
 
 Then the software starts to calculate logR and logOR and gcbias
 the gcbias plaes look this blog http://www.zxzyl.com/archives/988
-```math
+$$
 the logR is 
     ncount <- tapply(rCountN, gcpct, sum)
     tcount <- tapply(rCountT, gcpct, sum)
-    tsc1=sum(ncount)/sum(tcount)
+    tsc1=\frac {sum(ncount)} {sum(tcount)}
     log2(1+rCountT*tscl) - log2(1+rCountN) - gcbias
 the logOR is
-    1=varT x countT
-    2=(1-varT) x countT 
-    3=varN x countN
-    4=(1-varN) x countN
+    1 = varT x countT
+    2 = (1-varT) x countT 
+    3 = varN x countN
+    4 = (1-varN) x countN
     than 
     ## log-odds-ratio (Haldane correction)
-    logOR = log(1+0.5)-log(2+0.5)-log(3+0.5)+log(4+0.5) #using 
+    logOR = log(1+0.5)-log(2+0.5)-log(3+0.5)+log(4+0.5) 
     ## variance of log-odds-ratio (Haldane; Gart & Zweifel Biometrika 1967)
-    logOR = (1/( [,1]+0.5) + 1/( [,2]+0.5) + 1/( [,3]+0.5) + 1/( [,4]+0.5))
-```
+    logOR = (\frac {1} {( [,1]+0.5)} + \frac {1} {( [,2]+0.5)} + \frac {1} {( [,3]+0.5)} + \frac {1} {( [,4]+0.5))}
+$$
 ### The following steps are the EM algorithm, here they use Bayesian in step E to get the posterior probability,
 ```
 ####LogR mixture model parameter####
@@ -284,17 +284,17 @@ chr1    12595   12802   208        0.011583            DDX11L1
 例如gene  EGFR
 
 片段长度：
-```math
+$$
 length = L1 L2  L3  L4  L5
-```
+$$
 归一化覆盖:
-```math
+$$
 Tn = Tn_{1}\ Tn_{2}\ Tn_{3}\ Tn_{4}\ Tn_{5}
-```
+$$
 
-```math
+$$
 Nn = Nn_{1}\ Nn_{2}\ Nn_{3}\ Nn_{4}\ Nn_{5}
-```
+$$
 
 计算 :  
 $$
