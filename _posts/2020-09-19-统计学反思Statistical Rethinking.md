@@ -4,7 +4,7 @@ title:      Statistical Rethinking统计学反思(1章节总结)
 subtitle:   somatic single nucleotide variant calling algorithms
 date:       2020-07-14
 author:     soliva
-header-img: img/MCMC.jpg
+header-img: img/MCMC.png
 catalog: 	 true
 tags:
     - 统计学
