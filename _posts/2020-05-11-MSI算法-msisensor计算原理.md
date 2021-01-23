@@ -1,4 +1,4 @@
-/clinical/public/panel825plus/P2005040007_W060884T_W060476N_panel825plus---
+---
 layout:     post
 title:      MSI算法
 subtitle:   msisensor计算原理
@@ -7,8 +7,11 @@ author:     BY
 header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
-    - MSI
+    - 生信算法
 ---
+
+
+
 # MSI
 ## msisensor 计算msi原理
  MSI突变中重复至少5次的1-5个碱基的序列。
